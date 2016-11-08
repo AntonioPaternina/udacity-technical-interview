@@ -33,9 +33,9 @@ def binary_search_compute(input_array, value, start, end):
         else:
             return -1
     elif value > input_array[current_index]:
-        return binary_search_compute(input_array, value, current_index, end)
+        return binary_search_compute(input_array, value, current_index + 1, end)
     else:
-        return binary_search_compute(input_array, value, start, current_index)
+        return binary_search_compute(input_array, value, start, current_index - 1)
 
 test_list = [1,3,9,11,15,19,29]
 test_val1 = 25
